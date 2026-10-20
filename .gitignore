@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.next/
+.turbo/
+.env
+.env.local
+cms/.env
+frontend/.env
+*.log
+.DS_Store
+Thumbs.db
+playwright-report/
+test-results/
+cms/src/app/(payload)/admin/importMap.js
+*.db
+*.sqlite
