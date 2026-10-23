@@ -1,0 +1,34 @@
+.testimonials {
+  padding: 36px 0;
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.testimonial {
+  padding: 22px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: 14px;
+}
+
+.testimonial__text {
+  margin: 0 0 14px;
+  color: var(--color-text);
+}
+
+.testimonial__name {
+  margin: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 860px) {
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+}

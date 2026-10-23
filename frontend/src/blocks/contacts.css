@@ -1,0 +1,22 @@
+.contacts {
+  padding: 36px 0 16px;
+}
+
+.contacts__card {
+  padding: 28px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: 14px;
+}
+
+.contacts__card p {
+  color: var(--color-muted);
+}
+
+.contacts__card a {
+  color: var(--color-accent);
+}
+
+.contacts__card .btn {
+  margin-top: 12px;
+}
