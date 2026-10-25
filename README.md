@@ -1,21 +1,30 @@
-# BudgetFlow Landing (Payload + TypeScript)
+# Finance Helper — лендінг (Payload + TypeScript)
 
-Рекламний лендінг для вебзастосунку **BudgetFlow** (практика, група ІТ-22).  
-Мета сторінки — пояснити продукт і спрямувати відвідувача в основний Django-сайт.
+Візитка для **того самого** вебзастосунку, що в розділі 1 звіту:
 
-Основний застосунок: https://github.com/aandr5336/finance_helper_django
+**тема:** система автоматизації процесів бюджетування та аналізу ефективності витрат  
+**основний код:** https://github.com/aandr5336/finance_helper_django  
+**бренд у UI:** Finance Helper  
+
+Цей репозиторій = розділ 2 (JS/TS + Payload): переконує відкрити основний Django-сайт.
+
+## Як пов’язано
+
+| Частина звіту | Що це | Репозиторій |
+|---------------|--------|-------------|
+| Розділ 1 | Django + MySQL (облік, бюджети, цілі) | `finance_helper_django` |
+| Розділ 2 | Лендінг на Payload + Vite/TS | цей репо |
+| Кнопка на лендінгу | веде на `http://127.0.0.1:8000/` | той самий Django |
 
 ## Структура
 
 | Папка | Призначення |
 |-------|-------------|
-| `cms/` | Payload CMS 3 (колекції, блоки, API `/api/common`, `/api/page`) |
-| `frontend/` | Vite + TypeScript (стани loading / error / ready, рендер блоків) |
-| `backend/data/` | Seed JSON для контенту BudgetFlow |
+| `cms/` | Payload CMS (сторінки, блоки, API) |
+| `frontend/` | Vite + TypeScript (стани loading / error / ready) |
+| `backend/data/` | Текст лендінгу про Finance Helper |
 
-## Швидкий старт (лише лендінг, без CMS)
-
-Підходить для демонстрації та скрінів:
+## Запуск лендінгу (без CMS)
 
 ```powershell
 cd frontend
@@ -23,22 +32,7 @@ npm install
 npm run dev
 ```
 
-Відкрий http://127.0.0.1:5173/  
-Якщо CMS не запущена, фронт підхопить дані з `public/seed/`.
+Відкрий адресу з терміналу (часто http://localhost:5173/).  
+Якщо CMS не запущена — підхопиться `public/seed/`.
 
-Кнопка «Відкрити BudgetFlow» веде на `http://127.0.0.1:8000/` (або `VITE_APP_URL`).
-
-## Запуск з Payload CMS
-
-1. У `cms/` скопіюй `.env.example` → `.env`, вкажи `DATABASE_URL` (Postgres / Neon) і `PAYLOAD_SECRET`.
-2. `pnpm install` і `pnpm dev` у `cms/` (Node 20+).
-3. У адмінці створи сторінку з блоками Hero / Features / Testimonials / Contacts.
-4. У `frontend/.env` вкажи `VITE_API_URL=http://localhost:3000`.
-
-## Змінні оточення
-
-Див. `.env.example` у корені та `cms/.env.example`.
-
-## Деплой
-
-`vercel.json` залишено для фронту/CMS за потреби. Для звіту достатньо локального запуску + скріни адмінки та публічної сторінки.
+Паралельно запущений Django (`python manage.py runserver`) потрібен, щоб кнопка «Відкрити Finance Helper» відкрила робочий застосунок.
