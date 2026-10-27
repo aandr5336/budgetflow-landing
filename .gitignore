@@ -11,6 +11,5 @@ frontend/.env
 Thumbs.db
 playwright-report/
 test-results/
-cms/src/app/(payload)/admin/importMap.js
 *.db
 *.sqlite
