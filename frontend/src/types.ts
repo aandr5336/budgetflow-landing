@@ -13,13 +13,17 @@ export type MediaImage = {
   alt: string
 }
 
+export type AppPreviewVariant = 'dashboard' | 'transactions'
+
 export type HeroBlock = {
   type: 'hero'
   anchor?: string
   badge?: string
   title: string
   subtitle: string
-  image: MediaImage
+  /** @deprecated UI mock replaces static images */
+  image?: MediaImage
+  preview?: AppPreviewVariant
   buttons: CtaButton[]
 }
 
@@ -56,6 +60,9 @@ export type ContactsBlock = {
   phone?: string
   email?: string
   address?: string
+  /** @deprecated UI mock replaces static images */
+  image?: MediaImage
+  preview?: AppPreviewVariant
 }
 
 /** Union усіх блоків лендінгу */

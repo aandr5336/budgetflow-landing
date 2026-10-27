@@ -1,12 +1,13 @@
 import type { HeroBlock } from '../types'
+import { appPreview } from './app-preview'
 import './hero.css'
 
 export function hero(block: HeroBlock): string {
-  const { anchor, badge, title, subtitle, image, buttons } = block
+  const { anchor, badge, title, subtitle, buttons, preview = 'dashboard' } = block
   return `
     <section class="hero" id="${anchor ?? 'top'}">
       <div class="hero__content">
-        ${badge ? `<span class="hero__badge">${badge}</span>` : ''}
+        ${badge ? `<p class="hero__brand">${badge}</p>` : ''}
         <h1 class="hero__title">${title}</h1>
         <p class="hero__subtitle">${subtitle}</p>
         <div class="hero__actions">
@@ -18,7 +19,9 @@ export function hero(block: HeroBlock): string {
             .join('')}
         </div>
       </div>
-      <img class="hero__image" src="${image.src}" alt="${image.alt}" />
+      <div class="hero__media">
+        ${appPreview(preview)}
+      </div>
     </section>
   `
 }

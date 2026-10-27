@@ -9,5 +9,14 @@ export const Contacts: Block = {
     { name: 'phone', type: 'text', label: 'Телефон' },
     { name: 'email', type: 'text', label: 'Email' },
     { name: 'address', type: 'textarea', label: 'Адреса / підказка' },
+    {
+      name: 'image',
+      type: 'group',
+      label: 'Зображення',
+      fields: [
+        { name: 'src', type: 'text', label: 'URL' },
+        { name: 'alt', type: 'text', label: 'Alt' },
+      ],
+    },
   ],
 }
