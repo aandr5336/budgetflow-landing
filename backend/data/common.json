@@ -1,11 +1,11 @@
-﻿{
+{
   "siteName": "Finance Helper",
   "menu": [
-    { "label": "РњРѕР¶Р»РёРІРѕСЃС‚С–", "link": "#features" },
-    { "label": "Р’С–РґРіСѓРєРё", "link": "#testimonials" },
-    { "label": "РЎС‚Р°СЂС‚", "link": "https://finance-helper-django.onrender.com/" }
+    { "label": "Можливості", "link": "#features" },
+    { "label": "Відгуки", "link": "#testimonials" },
+    { "label": "Старт", "link": "https://finance-helper-django.onrender.com/" }
   ],
   "footer": {
-    "text": "РџСЂРѕСЃС‚РёР№ СЃРїРѕСЃС–Р± С‚СЂРёРјР°С‚Рё РіСЂРѕС€С– РїС–Рґ РєРѕРЅС‚СЂРѕР»РµРј."
+    "text": "Простий спосіб тримати гроші під контролем."
   }
 }
