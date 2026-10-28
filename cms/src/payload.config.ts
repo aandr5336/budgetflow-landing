@@ -35,6 +35,8 @@ export default buildConfig({
     pool: {
       connectionString: process.env.DATABASE_URL || '',
     },
+    // Create/update tables on first boot (needed for empty Neon on Vercel).
+    push: true,
   }),
   sharp,
   plugins: [],
